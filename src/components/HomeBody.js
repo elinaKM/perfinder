@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const HomeBody = () => (
     <Wrapper>
-        Here will be body
+        Here will be body soon...
     </Wrapper>
 )
 
