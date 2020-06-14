@@ -31,5 +31,5 @@ jobs:
     - name: build
       run: npm run build
 
-    - name: sudo deploy gh pages
-      run: gh-pages -d build
+    - name: deploy gh pages
+      run: sudo gh-pages -d build
