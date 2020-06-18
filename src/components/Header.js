@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Header = () => (
     <Wrapper>
         <LogoLink href="#">
-            Header: Logo
+            BestFriend.
         </LogoLink>
         <NavList>
             <li>
@@ -36,12 +36,11 @@ const Wrapper = styled.div`
     flex-direction: row;
     justify-content: space-between;
     height: 70px;
-    background-color: #ECF0F1;
-    color: #4D4751;
+    color: grey;
     font-size: 14px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0px 20px;
+    padding: 0px 30px;
     align-items: center;
     margin: 0px;
 `
@@ -55,10 +54,15 @@ const StyledLink = styled.a`
     margin-left: 30px;
     text-decoration: none;
     color: inherit;
+    &:hover {
+        color: #87ABE0;
+    }
 `
 const LogoLink = styled.a`
     text-decoration: none;
-    color: inherit;
+    color: #87ABE0;
+    font-size: 25px;
+;
 `
 
 export default Header
