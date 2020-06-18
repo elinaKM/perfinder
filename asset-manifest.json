@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.js": "/petfinder/static/js/main.26c22b3e.chunk.js",
-    "main.js.map": "/petfinder/static/js/main.26c22b3e.chunk.js.map",
+    "main.js": "/petfinder/static/js/main.03ec106c.chunk.js",
+    "main.js.map": "/petfinder/static/js/main.03ec106c.chunk.js.map",
     "runtime-main.js": "/petfinder/static/js/runtime-main.523ad3ac.js",
     "runtime-main.js.map": "/petfinder/static/js/runtime-main.523ad3ac.js.map",
-    "static/js/2.3c99e296.chunk.js": "/petfinder/static/js/2.3c99e296.chunk.js",
-    "static/js/2.3c99e296.chunk.js.map": "/petfinder/static/js/2.3c99e296.chunk.js.map",
+    "static/js/2.118bf049.chunk.js": "/petfinder/static/js/2.118bf049.chunk.js",
+    "static/js/2.118bf049.chunk.js.map": "/petfinder/static/js/2.118bf049.chunk.js.map",
     "index.html": "/petfinder/index.html",
-    "precache-manifest.c38cd9dd1b093126ab7a08a59b12ec37.js": "/petfinder/precache-manifest.c38cd9dd1b093126ab7a08a59b12ec37.js",
+    "precache-manifest.97210800d747b1e6f6f3ac674594596d.js": "/petfinder/precache-manifest.97210800d747b1e6f6f3ac674594596d.js",
     "service-worker.js": "/petfinder/service-worker.js",
-    "static/js/2.3c99e296.chunk.js.LICENSE.txt": "/petfinder/static/js/2.3c99e296.chunk.js.LICENSE.txt"
+    "static/js/2.118bf049.chunk.js.LICENSE.txt": "/petfinder/static/js/2.118bf049.chunk.js.LICENSE.txt",
+    "static/media/dog-background.jpg": "/petfinder/static/media/dog-background.e5c7121a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.523ad3ac.js",
-    "static/js/2.3c99e296.chunk.js",
-    "static/js/main.26c22b3e.chunk.js"
+    "static/js/2.118bf049.chunk.js",
+    "static/js/main.03ec106c.chunk.js"
   ]
 }
