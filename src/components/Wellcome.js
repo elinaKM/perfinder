@@ -34,8 +34,6 @@ const Wellcome = () => (
 const BackgroundImage = styled.div`
     display: inline-block;
     width: 35%;
-    font-size: 0;
-    line-height: 0;
     vertical-align: middle;
     background-size: 100%;
     background-position: 50% 50%;
@@ -57,11 +55,11 @@ const ConentWrapper = styled.div`
 `
 
 const Title = styled.div`
-    font-size: 20px;
+    font-size: ${props => props.theme.fontSizes.title};
     margin-bottom: 30px;
 `
 const Text = styled.div`
-    color: grey;
+    font-size: ${props => props.theme.fontSizes.text};
     line-height: 1.6;
 `
 
@@ -71,7 +69,7 @@ const TitleWrapper = styled.div`
     margin: auto;
     flex-direction: column;
     height: calc(100% - 70px);
-    font-weight: bold;
+    color: ${props => props.theme.colors.text};
     `
 
 const ButtonsContainer = styled.div`
@@ -82,7 +80,6 @@ const ButtonsContainer = styled.div`
 `
 
 const Wrapper = styled.div`
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
 `
 export default Wellcome
