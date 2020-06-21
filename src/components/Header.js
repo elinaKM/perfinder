@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import HamMenuControl from './header/HamMenuControl'
 
 const Header = () => (
     <Wrapper>
@@ -28,6 +29,7 @@ const Header = () => (
                 </StyledLink>
             </li>
         </NavList>
+        <HamMenuControl />
     </Wrapper>
 )
 
