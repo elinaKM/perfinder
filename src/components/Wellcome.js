@@ -38,7 +38,10 @@ const BackgroundImage = styled.div`
     background-size: 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-image: url(${dogBackgroundImg}); 
+    background-image: url(${dogBackgroundImg});
+    @media (max-width: ${props => props.theme.screenWidthBreakPoints.ipad}) {
+        display: none;
+    }
 `
 
 const HeightDefinerDiv = styled.div`
@@ -52,6 +55,9 @@ const ConentWrapper = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
+    @media (max-width: ${props => props.theme.screenWidthBreakPoints.ipad}) {
+        width: 100%;
+    }
 `
 
 const Title = styled.div`

@@ -7,6 +7,7 @@ const theme = {
   },
   screenWidthBreakPoints: {
     mobile: "420px",
+    ipad: "780px",
   },
   borderRadius: {
     button: "4px",
