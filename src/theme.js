@@ -3,6 +3,7 @@ const theme = {
     primary: "#87ABE0",
     secondary: "#F8DEEB",
     text: "#555555",
+    buttonText: "#FFFFFF",
   },
   screenWidthBreakPoints: {
     mobile: "420px",
