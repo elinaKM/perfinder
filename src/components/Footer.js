@@ -31,7 +31,7 @@ const NavList = styled.ul`
     display: flex;
     justify-content: center;
     padding-inline-start: 0px;
-    background-color: #F8DEEB;
+    background-color: ${props => props.theme.colors.secondary};
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 0;
@@ -40,9 +40,9 @@ const NavList = styled.ul`
 const StyledLink = styled.a`
     margin-right: 30px;
     text-decoration: none;
-    color: grey;
+    color: ${props => props.theme.colors.text};
     &:hover {
-        color: #87ABE0;
+        color: ${props => props.theme.colors.primary};
     }
 `
 

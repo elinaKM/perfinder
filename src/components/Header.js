@@ -36,10 +36,6 @@ const Wrapper = styled.div`
     flex-direction: row;
     justify-content: space-between;
     height: 70px;
-    color: grey;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
     padding: 0px 30px;
     align-items: center;
     margin: 0px;
@@ -53,16 +49,15 @@ const NavList = styled.ul`
 const StyledLink = styled.a`
     margin-left: 30px;
     text-decoration: none;
-    color: inherit;
+    color: ${props => props.theme.colors.text};
     &:hover {
-        color: #87ABE0;
+        color: ${props => props.theme.colors.primary};
     }
 `
 const LogoLink = styled.a`
     text-decoration: none;
-    color: #87ABE0;
-    font-size: 25px;
-;
+    color: ${props => props.theme.colors.primary};
+    font-size: ${props => props.theme.fontSizes.title};
 `
 
 export default Header

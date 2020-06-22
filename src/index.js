@@ -2,11 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
 import Home from "./pages/Home";
+import { ThemeProvider } from "styled-components";
+import theme from "./theme";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <React.StrictMode>
+      <Home />
+    </React.StrictMode>
+  </ThemeProvider>,
   document.getElementById("root")
 );
 
