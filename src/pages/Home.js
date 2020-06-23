@@ -2,15 +2,15 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import Footer from '../components/Footer'
 import Wellcome from '../components/Wellcome'
-import NavMenu from '../components/sideMenu/SideDrawerMenu'
+import SideDrawerMenu from '../components/sideMenu/SideDrawerMenu'
 import Backdrop from './../components/common/Backdrop'
 
 const Home = () => {
     const [showMenu, setShowMenu] = useState(false);
-    
+
     return (
         <Wrapper>
-            <NavMenu open={showMenu} onCloseMenu={() => setShowMenu(false)}/>
+            <SideDrawerMenu open={showMenu} onCloseMenu={() => setShowMenu(false)}/>
             { showMenu && <Backdrop onClick={() => setShowMenu(false)}/>}
             <Wellcome setShowMenu={setShowMenu}/>
             <Footer/>
