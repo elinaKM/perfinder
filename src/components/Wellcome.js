@@ -34,7 +34,7 @@ const Wellcome = ({ setShowMenu }) => (
 
 const BackgroundImage = styled.div`
     display: inline-block;
-    width: 35%;
+    width: 30%;
     vertical-align: middle;
     background-size: 100%;
     background-position: 50% 50%;
@@ -52,7 +52,7 @@ const HeightDefinerDiv = styled.div`
 `
 
 const ConentWrapper = styled.div`
-    width: 65%;
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
