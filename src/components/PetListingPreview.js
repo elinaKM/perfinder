@@ -41,7 +41,7 @@ const Title = styled.div`
     font-size: ${props => props.theme.fontSizes.title};
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin-bottom: 50px;
 `
 const ListingWrapper = styled.div`
     display: flex;
