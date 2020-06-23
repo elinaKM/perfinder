@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Footer from '../components/Footer'
 import Wellcome from '../components/Wellcome'
+import '../index.css'
 
 const Home = () => (
     <Wrapper>
@@ -15,9 +16,8 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    font-weight: bold;
+    font-family: Nexa, Arial, Helvetica, sans-serif;
 `
 
 export default Home
