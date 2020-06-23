@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import HamMenuControl from './header/HamMenuControl'
 
-const Header = () => (
+const Header = ({ setShowMenu }) => (
     <Wrapper>
         <LogoLink href="#">
             BestFriend.
             </LogoLink>
+        <HamMenuControl onClick={setShowMenu}/>
     </Wrapper>
 )
 

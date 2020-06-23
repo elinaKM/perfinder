@@ -1,15 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import Footer from '../components/Footer'
 import Wellcome from '../components/Wellcome'
 import '../index.css'
+import SideDrawerMenu from '../components/sideMenu/SideDrawerMenu'
+import Backdrop from './../components/common/Backdrop'
 
-const Home = () => (
-    <Wrapper>
-        <Wellcome/>
-        <Footer/>
-    </Wrapper>
-)
+const Home = () => {
+    const [showMenu, setShowMenu] = useState(false);
+
+    return (
+        <Wrapper>
+            <SideDrawerMenu open={showMenu} onCloseMenu={() => setShowMenu(false)}/>
+            { showMenu && <Backdrop onClick={() => setShowMenu(false)}/>}
+            <Wellcome setShowMenu={setShowMenu}/>
+            <Footer/>
+        </Wrapper>
+    )
+}
 
 const Wrapper = styled.div`
     height: 100vh;
