@@ -29,6 +29,7 @@ const Wrapper = styled.div`
     justify-content: space-between;
     font-size: 14px;
     font-family: Nexa, Arial, Helvetica, sans-serif;
+    color: ${props => props.theme.colors.text};
 `
 
 export default Home
