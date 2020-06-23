@@ -4,23 +4,23 @@ import dogBackgroundImg from '../images/dog-background.jpg'
 import Header from './Header'
 import Button from './common/Button'
 
-const Wellcome = () => (
+const Wellcome = ({ setShowMenu }) => (
     <Wrapper>
         <BackgroundImage>
-            <HeightDefinerDiv/>
+            <HeightDefinerDiv />
         </BackgroundImage>
         <ConentWrapper>
-            <Header/>
+            <Header setShowMenu={setShowMenu} />
             <TitleWrapper>
                 <Title>
                     Find your Best Friend
                 </Title>
                 <Text>
-                    This site is a perfect place to find a perfect pet.<br/>
-                    Animals bring a lot of light and joy in our life.<br/>
-                    Pick one.<br/>
-                    Save one live.<br/>
-                    Find a new love.<br/>
+                    This site is a perfect place to find a perfect pet.<br />
+                    Animals bring a lot of light and joy to our life.<br />
+                    Pick one.<br />
+                    Save one live.<br />
+                    Find a new love.<br />
                 </Text>
                 <ButtonsContainer>
                     <Button>Find a Dog</Button>
@@ -29,7 +29,8 @@ const Wellcome = () => (
             </TitleWrapper>
         </ConentWrapper>
     </Wrapper>
-);
+)
+
 
 const BackgroundImage = styled.div`
     display: inline-block;
