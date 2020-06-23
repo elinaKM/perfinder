@@ -11,6 +11,7 @@ const theme = {
   },
   borderRadius: {
     button: "4px",
+    card: "20px",
   },
   fontSizes: {
     smallIconText: "0.5rem", // 8px
