@@ -2,9 +2,11 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import Footer from '../components/Footer'
 import Wellcome from '../components/Wellcome'
-import '../index.css'
+import PetListingPreview from '../components/PetListingPreview'
 import SideDrawerMenu from '../components/sideMenu/SideDrawerMenu'
 import Backdrop from './../components/common/Backdrop'
+import '../index.css'
+
 
 const Home = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -14,6 +16,7 @@ const Home = () => {
             <SideDrawerMenu open={showMenu} onCloseMenu={() => setShowMenu(false)}/>
             { showMenu && <Backdrop onClick={() => setShowMenu(false)}/>}
             <Wellcome setShowMenu={setShowMenu}/>
+            <PetListingPreview/>
             <Footer/>
         </Wrapper>
     )
