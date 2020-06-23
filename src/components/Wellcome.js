@@ -39,7 +39,7 @@ const BackgroundImage = styled.div`
     background-size: 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-image: url(${dogBackgroundImg});
+    background-image: linear-gradient(to bottom, transparent, white), url(${dogBackgroundImg});
     @media (max-width: ${props => props.theme.screenWidthBreakPoints.ipad}) {
         display: none;
     }
