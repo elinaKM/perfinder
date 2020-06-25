@@ -1,28 +1,22 @@
 {
   "files": {
-    "main.css": "/petfinder/static/css/main.0d753565.chunk.css",
-    "main.js": "/petfinder/static/js/main.15a8f441.chunk.js",
-    "main.js.map": "/petfinder/static/js/main.15a8f441.chunk.js.map",
+    "main.js": "/petfinder/static/js/main.eee116d4.chunk.js",
+    "main.js.map": "/petfinder/static/js/main.eee116d4.chunk.js.map",
     "runtime-main.js": "/petfinder/static/js/runtime-main.523ad3ac.js",
     "runtime-main.js.map": "/petfinder/static/js/runtime-main.523ad3ac.js.map",
-    "static/js/2.1ccfccc5.chunk.js": "/petfinder/static/js/2.1ccfccc5.chunk.js",
-    "static/js/2.1ccfccc5.chunk.js.map": "/petfinder/static/js/2.1ccfccc5.chunk.js.map",
+    "static/js/2.3b5ca982.chunk.js": "/petfinder/static/js/2.3b5ca982.chunk.js",
+    "static/js/2.3b5ca982.chunk.js.map": "/petfinder/static/js/2.3b5ca982.chunk.js.map",
     "index.html": "/petfinder/index.html",
-    "precache-manifest.4b93fa19105ffd307e918c757a452b32.js": "/petfinder/precache-manifest.4b93fa19105ffd307e918c757a452b32.js",
+    "precache-manifest.e21dd4338e532aaa12dc00aa66bb437a.js": "/petfinder/precache-manifest.e21dd4338e532aaa12dc00aa66bb437a.js",
     "service-worker.js": "/petfinder/service-worker.js",
-    "static/css/main.0d753565.chunk.css.map": "/petfinder/static/css/main.0d753565.chunk.css.map",
-    "static/js/2.1ccfccc5.chunk.js.LICENSE.txt": "/petfinder/static/js/2.1ccfccc5.chunk.js.LICENSE.txt",
-    "static/media/089.jpg": "/petfinder/static/media/089.4dc6f3e8.jpg",
-    "static/media/index.css": "/petfinder/static/media/Nexa-Light.12108809.otf",
+    "static/js/2.3b5ca982.chunk.js.LICENSE.txt": "/petfinder/static/js/2.3b5ca982.chunk.js.LICENSE.txt",
     "static/media/close-icon.svg": "/petfinder/static/media/close-icon.971dc0eb.svg",
     "static/media/dog-background.jpg": "/petfinder/static/media/dog-background.e5c7121a.jpg",
-    "static/media/ham-menu.svg": "/petfinder/static/media/ham-menu.adb663ad.svg",
-    "static/media/paw-print.jpg": "/petfinder/static/media/paw-print.039ff100.jpg"
+    "static/media/ham-menu.svg": "/petfinder/static/media/ham-menu.adb663ad.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.523ad3ac.js",
-    "static/js/2.1ccfccc5.chunk.js",
-    "static/css/main.0d753565.chunk.css",
-    "static/js/main.15a8f441.chunk.js"
+    "static/js/2.3b5ca982.chunk.js",
+    "static/js/main.eee116d4.chunk.js"
   ]
 }
