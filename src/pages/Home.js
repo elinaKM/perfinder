@@ -10,8 +10,8 @@ const Home = () => {
 
     return (
         <Wrapper>
-            <SideDrawerMenu open={isMenuVisible} onCloseMenu={() => setMenuVisible(false)}/>
-            { isMenuVisible && <Backdrop onClick={() => setMenuVisible(false)}/>}
+            <SideDrawerMenu isOpen={isMenuVisible} onCloseMenu={() => setMenuVisible(false)}/>
+            { isMenuVisible && <Backdrop clickHandler ={() => setMenuVisible(false)}/>}
             <Wellcome setMenuVisible={setMenuVisible}/>
             <Footer/>
         </Wrapper>

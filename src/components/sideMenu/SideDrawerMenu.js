@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import SideMenuCloseControl from './SideMenuCloseControl'
 import { css } from 'styled-components'
 
-const SideDrawerMenu = ({open, onCloseMenu}) => (
-    <Wrapper open = {open}>
-        <SideMenuCloseControl onClick = {onCloseMenu}/>
+const SideDrawerMenu = ({isOpen, onCloseMenu}) => (
+    <Wrapper isOpen = {isOpen}>
+        <SideMenuCloseControl onCloseMenu = {onCloseMenu}/>
         <NavList>
             <li>
                 <StyledLink href="#">
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
     padding-top: 25px;
     transform: translateX(100%);
     transition: transform .5s ease-out;
-    ${ props => props.open && css`
+    ${ props => props.isOpen && css`
         transform: translateX(0);
     `};
 `
