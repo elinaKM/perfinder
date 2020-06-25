@@ -6,13 +6,13 @@ import SideDrawerMenu from '../components/sideMenu/SideDrawerMenu'
 import Backdrop from './../components/common/Backdrop'
 
 const Home = () => {
-    const [showMenu, setShowMenu] = useState(false);
+    const [isMenuVisible, setMenuVisible] = useState(false);
 
     return (
         <Wrapper>
-            <SideDrawerMenu open={showMenu} onCloseMenu={() => setShowMenu(false)}/>
-            { showMenu && <Backdrop onClick={() => setShowMenu(false)}/>}
-            <Wellcome setShowMenu={setShowMenu}/>
+            <SideDrawerMenu open={isMenuVisible} onCloseMenu={() => setMenuVisible(false)}/>
+            { isMenuVisible && <Backdrop onClick={() => setMenuVisible(false)}/>}
+            <Wellcome setMenuVisible={setMenuVisible}/>
             <Footer/>
         </Wrapper>
     )
