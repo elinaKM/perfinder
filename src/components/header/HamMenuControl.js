@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import menuIcon from '../../images/icons/ham-menu.svg'
 
-const HamMenuControl = ({ onClick }) => (
-  <Wrapper onClick={onClick}>
+const HamMenuControl = ({ clickHandler }) => (
+  <Wrapper onClick={clickHandler}>
     <img src={menuIcon} alt="navigation menu" />
   </Wrapper>
 )

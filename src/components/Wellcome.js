@@ -4,13 +4,13 @@ import dogBackgroundImg from '../images/dog-background.jpg'
 import Header from './Header'
 import Button from './common/Button'
 
-const Wellcome = ({ setShowMenu }) => (
+const Wellcome = ({ setMenuVisible }) => (
     <Wrapper>
         <BackgroundImage>
             <HeightDefinerDiv />
         </BackgroundImage>
         <ConentWrapper>
-            <Header setShowMenu={setShowMenu} />
+            <Header setMenuVisible={setMenuVisible} />
             <TitleWrapper>
                 <Title>
                     Find your Best Friend
