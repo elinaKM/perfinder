@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Backdrop = ({onClick}) => <Wrapper onClick={onClick}/>
+const Backdrop = ({clickHandler }) => <Wrapper onClick={clickHandler }/>
 
 const Wrapper = styled.div`
   position: fixed;
