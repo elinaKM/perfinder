@@ -3,10 +3,28 @@ import styled from 'styled-components'
 import Footer from '../components/Footer'
 import Wellcome from '../components/Wellcome'
 import PetListingPreview from '../components/PetListingPreview'
+import catImage from '../images/089.jpg'
 import SideDrawerMenu from '../components/sideMenu/SideDrawerMenu'
 import Backdrop from './../components/common/Backdrop'
 import '../index.css'
 
+const pets = [
+    {
+        name: "Jackie",
+        img: catImage,
+        id: "1234"
+    },
+    {
+        name: "Pensil",
+        img: catImage,
+        id: "12345"
+    },
+    {
+        name: "Bob",
+        img: catImage,
+        id: "123456"
+    },
+];
 
 
 const Home = () => {
@@ -19,6 +37,7 @@ const Home = () => {
             <SideDrawerMenu isOpen={isMenuVisible} onCloseMenu={sideDrawerCloseHandler}/>
             {isMenuVisible && <Backdrop clickHandler ={sideDrawerCloseHandler}/>}
             <Wellcome setMenuVisible={setMenuVisible}/>
+            <PetListingPreview pets={pets}/>
             <Footer/>
         </Wrapper>
     )
