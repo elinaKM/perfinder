@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import AskAboutForm from '../components/pet/AskAboutForm'
 
-const PetPage = ({name, img, breed, location, age, gender, size, color, aboutInfo}) => {
+const PetPage = ({name, img, breed, location, age, gender, size, color, aboutInfo, org}) => {
+
     return (
         <Wrapper>
             <Image img={img}/>
@@ -30,21 +32,7 @@ const PetPage = ({name, img, breed, location, age, gender, size, color, aboutInf
                 {aboutInfo.map((item) => 
                     <AboutItem key={item.label} label={item.label} info={item.info}/>
                 )}
-                <AskAboutForm>
-                    <About>
-                        Ask about {name}
-                    </About>
-                    <UserDetail>
-                        <label for="myInput">First name</label>
-                        <input id="myInput" type="text" />
-                        <label for="myInput">Last name</label>
-                        <input id="myInput" type="text" />
-                        <label for="myInput">Email</label>
-                        <input id="myInput" type="text" />
-                        <label for="myInput">Phone Number</label>
-                        <input id="myInput" type="text" />
-                    </UserDetail>
-                </AskAboutForm>
+                <AskAboutForm name={name} org={org}/>
             </DetailsCard>
         </Wrapper>
     )
@@ -127,14 +115,4 @@ const Label = styled.h3`
 const Information = styled.p`
 `
 
-const AskAboutForm = styled.form`
-    border: 1px solid lightgrey;
-    border-radius: ${props => props.theme.borderRadius.card};
-    padding: 20px;
-`
-
-const UserDetail = styled.div`
-    display: flex;
-    flex-direction: column;
-`
 export default PetPage
