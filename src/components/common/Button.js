@@ -12,8 +12,8 @@ const StyledButton = styled.button`
     border: none;
     color: ${props => props.theme.colors.buttonText};
     padding: 10px 30px;
-    font-weight: bold;
     font-size: ${props => props.theme.fontSizes.text};
+    font-family: inherit;
     border-radius: ${props => props.theme.borderRadius.button};
     &:hover {
         box-shadow: 0 8px 6px -6px #423535;
