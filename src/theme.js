@@ -1,7 +1,7 @@
 const theme = {
   colors: {
     primary: "#87ABE0",
-    secondary: "#F8DEEB",
+    secondary: "#FAE8F2",
     text: "#555555",
     buttonText: "#FFFFFF",
   },

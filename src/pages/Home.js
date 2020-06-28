@@ -1,14 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import Footer from '../components/Footer'
 import Wellcome from '../components/Wellcome'
+import SideDrawerMenu from '../components/sideMenu/SideDrawerMenu'
+import Backdrop from './../components/common/Backdrop'
 
-const Home = () => (
-    <Wrapper>
-        <Wellcome/>
-        <Footer/>
-    </Wrapper>
-)
+
+const Home = () => {
+    const [isMenuVisible, setMenuVisible] = useState(false);
+    
+    const sideDrawerCloseHandler = () => setMenuVisible(false);
+
+    return (
+        <Wrapper>
+            <SideDrawerMenu isOpen={isMenuVisible} onCloseMenu={sideDrawerCloseHandler}/>
+            {isMenuVisible && <Backdrop clickHandler ={sideDrawerCloseHandler}/>}
+            <Wellcome setMenuVisible={setMenuVisible}/>
+            <Footer/>
+        </Wrapper>
+    )
+}
 
 const Wrapper = styled.div`
     height: 100vh;
@@ -16,8 +27,6 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
 `
 
 export default Home
