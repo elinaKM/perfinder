@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <Wrapper>
             <SideDrawerMenu isOpen={isMenuVisible} onCloseMenu={sideDrawerCloseHandler}/>
-            { isMenuVisible && <Backdrop clickHandler ={sideDrawerCloseHandler}/>}
+            {isMenuVisible && <Backdrop clickHandler ={sideDrawerCloseHandler}/>}
             <Wellcome setMenuVisible={setMenuVisible}/>
             <Footer/>
         </Wrapper>
