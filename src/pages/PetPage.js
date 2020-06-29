@@ -1,43 +1,84 @@
 import React from 'react'
 import styled from 'styled-components'
+import catSteps from '../images/paw-print.jpg'
 import AskAboutForm from '../components/pet/AskAboutForm'
 
-const PetPage = ({name, img, breed, location, age, gender, size, color, aboutInfo, org}) => {
-
-    return (
-        <Wrapper>
-            <Image img={img}/>
-            <DetailsCard>
-                <Name>
-                    {name}
-                </Name>
-                <Basics>
-                    <Breed>
-                        {breed}
-                    </Breed>
-                    <li></li>
-                    <Location>
-                        {location}
-                    </Location>
-                </Basics>
-                <InShort>
-                    <li>{age}</li>
-                    <li>{gender}</li>
-                    <li>{size}</li>
-                    <li>{color}</li>
-                </InShort>
-                <About>
-                    About
-                </About>
-                {aboutInfo.map((item) => 
-                    <AboutItem key={item.label} label={item.label} info={item.info}/>
-                )}
-                <AskAboutForm name={name} org={org}/>
-            </DetailsCard>
-        </Wrapper>
-    )
+const petsDB = {
+    "abc" : {
+            name: "Gula",
+            imgs: [catSteps],
+            breed: "Dvorniajka",
+            location: "NewYork",
+            age: "Young",
+            gender: "Female",
+            size: "Small",
+            color: "White",
+            aboutInfo: [
+                {
+                    label: "CHARACTERISTICS",
+                    info: "Quiet, Calm, Relaxed, Shy, Playful"
+                },
+                {
+                    label: "COAT LENGTH",
+                    info: "Short"
+                },
+                {
+                    label: "HOUSE-TRAINED",
+                    info: "Yes"
+                },
+                {
+                    label: "HEALTH",
+                    info: "Vaccinations up to date, spayed / neutered."
+                }
+            ],
+            org: "CARMA, Fredericton Chapter"
+            }
 }
 
+const PetPage = (props) => {
+    
+    const petObj = petsDB[props.petId];
+    console.log(petObj);
+    // const {imgs, name, breed, location, age, gender, size, color, aboutInfo, org} = petObj;
+
+    return (
+        //temporary:
+        <Wrapper>
+            My Id is: {props.petId}
+            {/* My Name is: {petObj.name} */}
+        </Wrapper>
+        // <Wrapper>
+        //     <Image img={imgs[0]}/>
+        //     <DetailsCard>
+        //         <Name>
+        //            {name}
+        //         </Name>
+        //         <Basics>
+        //             <Breed>
+        //                 {breed}
+        //             </Breed>
+        //             <li></li>
+        //             <Location>
+        //                 {location}
+        //             </Location>
+        //         </Basics>
+        //         <InShort>
+        //             <li>{age}</li>
+        //             <li>{gender}</li>
+        //             <li>{size}</li>
+        //             <li>{color}</li>
+        //         </InShort>
+        //         <About>
+        //             About
+        //         </About>
+        //         {aboutInfo.map((item) => 
+        //             <AboutItem key={item.label} label={item.label} info={item.info}/>
+        //         )}
+        //         <AskAboutForm name={name} org={org}/>
+        //     </DetailsCard>
+        // </Wrapper>
+    )
+}
 
 const Wrapper = styled.div`
     padding: 50px;
@@ -97,22 +138,17 @@ const About = styled.div`
 
 const AboutItem = ({label, info}) => (
     <StyledItem>
-        <Label>
+        <h3>
             {label}
-        </Label>
-        <Information>
+        </h3>
+        <p>
             {info}
-        </Information>
+        </p>
     </StyledItem>
 )
 
 const StyledItem = styled.div`
     margin-bottom: 20px;
-`
-const Label = styled.h3`
-`
-
-const Information = styled.p`
 `
 
 export default PetPage
