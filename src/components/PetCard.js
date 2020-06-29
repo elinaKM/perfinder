@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from '@reach/router'
 
 const PetCard = ({name, img}) => (
-    <StyledLink href="#">
+    <StyledLink to="pets/abc" >
         <Image img={img}/>
         <Name>
             {name}
@@ -30,7 +31,7 @@ const Name = styled.div`
     font-size: ${props => props.theme.fontSizes.text};
 `
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
     display: flex;
     flex-direction: column;
     margin-right: 40px;
