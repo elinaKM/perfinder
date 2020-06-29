@@ -1,30 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import catImage from '../images/089.jpg'
 import catSteps from '../images/paw-print.jpg'
 import PetListing from './PetListing';
 import PetCard from './PetCard';
 
-const pets = [
-    {
-        name: "Jackie",
-        img: catImage,
-        id: "1234"
-    },
-    {
-        name: "Pensil",
-        img: catImage,
-        id: "12345"
-    },
-    {
-        name: "Bob",
-        img: catImage,
-        id: "123456"
-    },
-];
 
 
-const PetListingPreview = () => (
+const PetListingPreview = ({pets}) => (
     <Wrapper>
         <Title>
             Pets Available for Adoption

@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import closeIcon from '../../images/icons/close-icon.svg'
 
-const SideMenuCloseControl = ({ onClick }) => 
+const SideMenuCloseControl = ({ onCloseMenu }) => 
   <Icon>
-    <img src={closeIcon} alt="close" onClick={onClick}/>
+    <img src={closeIcon} alt="close" onClick={onCloseMenu}/>
   </Icon>
 
 const Icon = styled.div`
