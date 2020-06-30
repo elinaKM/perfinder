@@ -11,6 +11,9 @@ const HamMenuControl = ({ clickHandler }) => (
 const Wrapper = styled.div`
   width: 20px;
   margin-left: 15px;
+  &:hover{
+    cursor: pointer;
+  }
 `
 
 export default HamMenuControl
