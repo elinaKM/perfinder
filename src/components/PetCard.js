@@ -38,6 +38,7 @@ const StyledLink = styled(Link)`
     width: 180px;
     height: 220px;
     text-decoration: none;
+    margin-bottom: 20px;
 `
 
 export default PetCard

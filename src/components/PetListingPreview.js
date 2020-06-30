@@ -4,8 +4,6 @@ import catSteps from '../images/paw-print.jpg'
 import PetListing from './PetListing';
 import PetCard from './PetCard';
 
-
-
 const PetListingPreview = ({pets}) => (
     <Wrapper>
         <Title>
@@ -18,16 +16,19 @@ const PetListingPreview = ({pets}) => (
     </Wrapper>
 )
 
-
 const Title = styled.div`
     font-size: ${props => props.theme.fontSizes.title};
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 `
+
 const ListingWrapper = styled.div`
     display: flex;
     margin: auto;
+    @media (max-width: ${props => props.theme.screenWidthBreakPoints.ipad}) {
+        flex-direction: column;
+    }
 `
 
 const MeetMoreButton = styled(PetCard)`
@@ -37,4 +38,5 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
 `
+
 export default PetListingPreview

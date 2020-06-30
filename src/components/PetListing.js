@@ -14,6 +14,9 @@ const PetListing = ({pets}) => (
 
 const Wrapper = styled.div`
     display: flex;
+    @media (max-width: ${props => props.theme.screenWidthBreakPoints.ipad}) {
+        flex-direction: column;
+    }
 `
 
 export default PetListing;
