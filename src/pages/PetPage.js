@@ -37,46 +37,39 @@ const petsDB = {
 
 const PetPage = (props) => {
     
-    const petObj = petsDB[props.petId];
-    console.log(petObj);
-    // const {imgs, name, breed, location, age, gender, size, color, aboutInfo, org} = petObj;
+    const {imgs, name, breed, location, age, gender, size, color, aboutInfo, org} = petsDB[props.petId];
 
     return (
-        //temporary:
         <Wrapper>
-            My Id is: {props.petId}
-            {/* My Name is: {petObj.name} */}
+            <Image img={imgs[0]}/>
+            <DetailsCard>
+                <Name>
+                   {name}
+                </Name>
+                <Basics>
+                    <Breed>
+                        {breed}
+                    </Breed>
+                    <li></li>
+                    <Location>
+                        {location}
+                    </Location>
+                </Basics>
+                <InShort>
+                    <li>{age}</li>
+                    <li>{gender}</li>
+                    <li>{size}</li>
+                    <li>{color}</li>
+                </InShort>
+                <About>
+                    About
+                </About>
+                {aboutInfo.map((item) => 
+                    <AboutItem key={item.label} label={item.label} info={item.info}/>
+                )}
+                <AskAboutForm name={name} org={org}/>
+            </DetailsCard>
         </Wrapper>
-        // <Wrapper>
-        //     <Image img={imgs[0]}/>
-        //     <DetailsCard>
-        //         <Name>
-        //            {name}
-        //         </Name>
-        //         <Basics>
-        //             <Breed>
-        //                 {breed}
-        //             </Breed>
-        //             <li></li>
-        //             <Location>
-        //                 {location}
-        //             </Location>
-        //         </Basics>
-        //         <InShort>
-        //             <li>{age}</li>
-        //             <li>{gender}</li>
-        //             <li>{size}</li>
-        //             <li>{color}</li>
-        //         </InShort>
-        //         <About>
-        //             About
-        //         </About>
-        //         {aboutInfo.map((item) => 
-        //             <AboutItem key={item.label} label={item.label} info={item.info}/>
-        //         )}
-        //         <AskAboutForm name={name} org={org}/>
-        //     </DetailsCard>
-        // </Wrapper>
     )
 }
 
@@ -99,7 +92,7 @@ const DetailsCard = styled.div`
     `
 
 const Image = styled.div`
-    height: 500px;
+    height: 400px;
     background-image: url(${props => props.img});
     background-repeat: no-repeat;
     `
@@ -107,11 +100,11 @@ const Image = styled.div`
 const Name = styled.div`
     font-size: ${props => props.theme.fontSizes.megaTitle};
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     `
 
 const Basics = styled.div`
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-weight: bold;
     display: flex;
 `
@@ -127,7 +120,7 @@ const InShort = styled.ul`
     display: flex;
     justify-content: space-between;
     padding-left: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     width: 300px;
 `
 const About = styled.div`
