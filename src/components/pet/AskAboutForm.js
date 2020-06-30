@@ -32,7 +32,9 @@ const AskAboutForm = ({ name, id, org }) => {
 
                 <TextAreaWithLabel label="Message" id="message" name="message" rows="10" value={message} onChange={(evt) => setmessage(evt.currentTarget.value)}/>
             </UserDetails>
-            <Button type="button" onClick={submitHandler}>Send Message</Button>
+            <SubmitButtonWrapper>
+                <Button type="button" onClick={submitHandler}>Send Message</Button>
+            </SubmitButtonWrapper>
         </Form>
     )
 }
@@ -46,7 +48,7 @@ const Form = styled.form`
 const UserDetails = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 30px 0;
+    margin: 20px 0;
 `
 
 const About = styled.div`
@@ -59,6 +61,12 @@ const To = styled.div`
     padding-top: 10px;
     border-top: 1px solid ${props => props.theme.colors.border};
     font-size: ${props => props.theme.fontSizes.subTitle};
+`
+
+const SubmitButtonWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
 `
 
 export default AskAboutForm
