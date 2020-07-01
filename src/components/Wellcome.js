@@ -1,16 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import dogBackgroundImg from '../images/dog-background.jpg'
-import Header from './Header'
 import Button from './common/Button'
 
-const Wellcome = ({ setMenuVisible }) => (
+const Wellcome = () => (
     <Wrapper>
         <BackgroundImage>
             <HeightDefinerDiv />
         </BackgroundImage>
         <ConentWrapper>
-            <Header setMenuVisible={setMenuVisible} />
             <TitleWrapper>
                 <Title>
                     Find your Best Friend
@@ -18,9 +16,7 @@ const Wellcome = ({ setMenuVisible }) => (
                 <Text>
                     This site is a perfect place to find a perfect pet.<br />
                     Animals bring a lot of light and joy to our life.<br />
-                    Pick one.<br />
-                    Save one live.<br />
-                    Find a new love.<br />
+                    Pick one. Save one live. Find a new love.
                 </Text>
                 <ButtonsContainer>
                     <Button>Find a Dog</Button>
@@ -62,8 +58,8 @@ const ConentWrapper = styled.div`
 `
 
 const Title = styled.div`
-    font-size: ${props => props.theme.fontSizes.title};
-    margin-bottom: 30px;
+    font-size: ${props => props.theme.fontSizes.subTitle};
+    margin-bottom: 20px;
 `
 const Text = styled.div`
     font-size: ${props => props.theme.fontSizes.text};
@@ -77,6 +73,7 @@ const TitleWrapper = styled.div`
     flex-direction: column;
     height: calc(100% - 70px);
     color: ${props => props.theme.colors.text};
+    margin-top: 120px;
     `
 
 const ButtonsContainer = styled.div`
