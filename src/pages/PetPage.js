@@ -79,6 +79,10 @@ const Wrapper = styled.div`
     font-size: ${props => props.theme.fontSizes.text};
     font-family: Nexa, Arial, Helvetica, sans-serif;
     color: ${props => props.theme.colors.text};
+    @media (max-width: ${props => props.theme.screenWidthBreakPoints.mobile}) {
+        padding: 20px;
+    }
+    padding-top: 80px;
     `
 
 const DetailsCard = styled.div`
@@ -121,7 +125,10 @@ const InShort = styled.ul`
     justify-content: space-between;
     padding-left: 20px;
     margin-bottom: 40px;
-    width: 300px;
+    max-width: 300px;
+    @media (max-width: ${props => props.theme.screenWidthBreakPoints.mobile}) {
+        flex-direction: column;
+    }
 `
 const About = styled.div`
     font-size: ${props => props.theme.fontSizes.title};
