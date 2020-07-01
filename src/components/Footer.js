@@ -34,7 +34,7 @@ const NavList = styled.ul`
     background-color: ${props => props.theme.colors.secondary};
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-bottom: 0;
+    margin: 0;
 `
 
 const StyledLink = styled.a`
