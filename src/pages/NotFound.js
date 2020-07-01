@@ -1,8 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const NotFound = () => 
-    <div>
+    <Wrapper>
         Page Not Found
-    </div>
+    </Wrapper>
 
+const Wrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: ${props => props.theme.fontSizes.subTitle};
+`
 export default NotFound
