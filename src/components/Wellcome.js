@@ -34,12 +34,12 @@ const Wellcome = ({ setMenuVisible }) => (
 
 const BackgroundImage = styled.div`
     display: inline-block;
-    width: 35%;
+    width: 30%;
     vertical-align: middle;
     background-size: 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-image: url(${dogBackgroundImg});
+    background-image: linear-gradient(to bottom, transparent, white), url(${dogBackgroundImg});
     @media (max-width: ${props => props.theme.screenWidthBreakPoints.ipad}) {
         display: none;
     }
@@ -52,7 +52,7 @@ const HeightDefinerDiv = styled.div`
 `
 
 const ConentWrapper = styled.div`
-    width: 65%;
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;

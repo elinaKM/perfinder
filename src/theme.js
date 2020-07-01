@@ -11,6 +11,8 @@ const theme = {
   },
   borderRadius: {
     button: "4px",
+    card: "20px",
+    picture: "50%",
   },
   fontSizes: {
     smallIconText: "0.5rem", // 8px
@@ -20,9 +22,9 @@ const theme = {
     subText: "0.9365rem", // 15px
     text: "1rem", // 16px
     smallTitle: "1.125rem", // 18px
-    subTitle: "1.25rem", // 20px
-    title: "1.5rem", // 24px
-    listingTitle: "1.75rem", //28px
+    subSubTitle: "1.25rem", // 20px
+    subTitle: "1.5rem", // 24px
+    title: "1.75rem", //28px
     bigTitle: "2rem", // 32px
     megaTitle: "2.25rem", // 36px
   },
