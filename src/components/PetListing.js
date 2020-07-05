@@ -6,7 +6,7 @@ const PetListing = ({pets}) => (
     <Wrapper>
         {
             pets.map((pet) =>
-            <PetCard name={pet.name} key={pet.id} img={pet.img}/>
+            <PetCard name={pet.name} key={pet.id} img={pet.img} id={pet.id}/>
           )
         }
     </Wrapper>
