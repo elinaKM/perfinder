@@ -4,6 +4,7 @@ const theme = {
     secondary: "#FAE8F2",
     text: "#555555",
     buttonText: "#FFFFFF",
+    border: "#A4A7AC",
   },
   screenWidthBreakPoints: {
     mobile: "420px",

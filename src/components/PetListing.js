@@ -6,7 +6,7 @@ const PetListing = ({pets}) => (
     <Wrapper>
         {
             pets.map((pet) =>
-            <PetCard name={pet.name} key={pet.id} img={pet.img}/>
+            <PetCard name={pet.name} key={pet.id} img={pet.img} id={pet.id}/>
           )
         }
     </Wrapper>
@@ -14,6 +14,9 @@ const PetListing = ({pets}) => (
 
 const Wrapper = styled.div`
     display: flex;
+    @media (max-width: ${props => props.theme.screenWidthBreakPoints.ipad}) {
+        flex-direction: column;
+    }
 `
 
 export default PetListing;
