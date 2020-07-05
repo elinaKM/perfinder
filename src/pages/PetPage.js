@@ -4,47 +4,105 @@ import catSteps from '../images/paw-print.jpg'
 import AskAboutForm from '../components/pet/AskAboutForm'
 
 const petsDB = {
-    "abc" : {
-            name: "Gula",
-            imgs: [catSteps],
-            breed: "Dvorniajka",
-            location: "NewYork",
-            age: "Young",
-            gender: "Female",
-            size: "Small",
-            color: "White",
-            aboutInfo: [
-                {
-                    label: "CHARACTERISTICS",
-                    info: "Quiet, Calm, Relaxed, Shy, Playful"
-                },
-                {
-                    label: "COAT LENGTH",
-                    info: "Short"
-                },
-                {
-                    label: "HOUSE-TRAINED",
-                    info: "Yes"
-                },
-                {
-                    label: "HEALTH",
-                    info: "Vaccinations up to date, spayed / neutered."
-                }
-            ],
-            org: "CARMA, Fredericton Chapter"
+    "1": {
+        name: "Gula",
+        imgs: [catSteps],
+        breed: "Dvorniajka",
+        location: "NewYork",
+        age: "Young",
+        gender: "Female",
+        size: "Small",
+        color: "White",
+        aboutInfo: [
+            {
+                label: "CHARACTERISTICS",
+                info: "Quiet, Calm, Relaxed, Shy, Playful"
+            },
+            {
+                label: "COAT LENGTH",
+                info: "Short"
+            },
+            {
+                label: "HOUSE-TRAINED",
+                info: "Yes"
+            },
+            {
+                label: "HEALTH",
+                info: "Vaccinations up to date, spayed / neutered."
             }
+        ],
+        org: "CARMA, Fredericton Chapter"
+    },
+    "2": {
+        name: "Gula",
+        imgs: [catSteps],
+        breed: "Dvorniajka",
+        location: "NewYork",
+        age: "Young",
+        gender: "Female",
+        size: "Small",
+        color: "White",
+        aboutInfo: [
+            {
+                label: "CHARACTERISTICS",
+                info: "Quiet, Calm, Relaxed, Shy, Playful"
+            },
+            {
+                label: "COAT LENGTH",
+                info: "Short"
+            },
+            {
+                label: "HOUSE-TRAINED",
+                info: "Yes"
+            },
+            {
+                label: "HEALTH",
+                info: "Vaccinations up to date, spayed / neutered."
+            }
+        ],
+        org: "CARMA, Fredericton Chapter"
+    },
+    "3": {
+        name: "Gula",
+        imgs: [catSteps],
+        breed: "Dvorniajka",
+        location: "NewYork",
+        age: "Young",
+        gender: "Female",
+        size: "Small",
+        color: "White",
+        aboutInfo: [
+            {
+                label: "CHARACTERISTICS",
+                info: "Quiet, Calm, Relaxed, Shy, Playful"
+            },
+            {
+                label: "COAT LENGTH",
+                info: "Short"
+            },
+            {
+                label: "HOUSE-TRAINED",
+                info: "Yes"
+            },
+            {
+                label: "HEALTH",
+                info: "Vaccinations up to date, spayed / neutered."
+            }
+        ],
+        org: "CARMA, Fredericton Chapter"
+    }
 }
 
 const PetPage = (props) => {
-    
-    const {imgs, name, breed, location, age, gender, size, color, aboutInfo, org} = petsDB[props.petId];
+
+    const { imgs, name, breed, location, age, gender, size, color, aboutInfo, org } = petsDB[props.petId];
 
     return (
         <Wrapper>
-            <Image img={imgs[0]}/>
+            <Image img={imgs[0]} />
             <DetailsCard>
                 <Name>
-                   {name}
+                    {name}
                 </Name>
                 <Basics>
                     <Breed>
@@ -64,10 +122,10 @@ const PetPage = (props) => {
                 <About>
                     About
                 </About>
-                {aboutInfo.map((item) => 
-                    <AboutItem key={item.label} label={item.label} info={item.info}/>
+                {aboutInfo.map((item) =>
+                    <AboutItem key={item.label} label={item.label} info={item.info} />
                 )}
-                <AskAboutForm name={name} org={org}/>
+                <AskAboutForm name={name} org={org} />
             </DetailsCard>
         </Wrapper>
     )
@@ -136,7 +194,7 @@ const About = styled.div`
     font-weight: bold;
 `
 
-const AboutItem = ({label, info}) => (
+const AboutItem = ({ label, info }) => (
     <StyledItem>
         <h3>
             {label}
