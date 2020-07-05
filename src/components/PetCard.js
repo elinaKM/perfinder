@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from '@reach/router'
+import { PETS } from './../configuration/pathes'
 
-const PetCard = ({name, img}) => (
-    <StyledLink to="pets/abc" >
-        <Image img={img}/>
+const PetCard = ({ name, img, id }) => (
+    <StyledLink to={id ? PETS + id : PETS} >
+        <Image img={img} />
         <Name>
             {name}
         </Name>

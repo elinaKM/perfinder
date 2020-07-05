@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import SideDrawerMenu from "./components/sideMenu/SideDrawerMenu";
 import Backdrop from "./components/common/Backdrop";
 import "./index.css";
+import { ROOT, PET } from "./configuration/pathes";
 
 const App = () => {
   const [isMenuVisible, setMenuVisible] = useState(false);
@@ -24,8 +25,8 @@ const App = () => {
       <Header setMenuVisible={setMenuVisible} />
       <Content>
         <Router>
-          <Home path="petfinder" />
-          <PetPage path="petfinder/pets/:petId" />
+          <Home path={ROOT} />
+          <PetPage path={ROOT + PET} />
           <NotFound default />
         </Router>
       </Content>

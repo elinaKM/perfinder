@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import HamMenuControl from './header/HamMenuControl'
 import { Link } from '@reach/router'
+import { ROOT } from './../configuration/pathes'
 
 
 const Header = ({ setMenuVisible }) => (
     <Wrapper>
-        <LogoLink to="petfinder">
+        <LogoLink to={ROOT}>
             BestFriend.
         </LogoLink>
         <HamMenuControl clickHandler={setMenuVisible}/>
