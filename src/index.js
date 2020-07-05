@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
-import Home from "./pages/Home";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme";
+import App from "./App";
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <React.StrictMode>
-      <Home />
+      <App />
     </React.StrictMode>
   </ThemeProvider>,
   document.getElementById("root")

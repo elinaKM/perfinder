@@ -10,7 +10,8 @@ const SideMenuCloseControl = ({ onCloseMenu }) =>
 const Icon = styled.div`
   margin-left: 85%;
   &:hover {
-    fill: ${props => props.theme.colors.primary}
+    fill: ${props => props.theme.colors.primary};
+    cursor: pointer;
   }
 `
 export default SideMenuCloseControl
