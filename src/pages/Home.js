@@ -22,6 +22,7 @@ const pets = [
     },
 ];
 
+
 const Home = () => (
     <Wrapper>
         <Wellcome />
