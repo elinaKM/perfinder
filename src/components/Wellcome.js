@@ -14,9 +14,9 @@ const Wellcome = () => (
                     Find your Best Friend
                 </Title>
                 <Text>
-                    This site is a perfect place to find a perfect pet.<br />
-                    Animals bring a lot of light and joy to our life.<br />
-                    Pick one. Save one live. Find a new love.
+                    <p>This site is a perfect place to find a perfect pet.</p>
+                    <p>Animals bring a lot of light and joy to our life.</p>
+                    <p>Pick one. Save one live. Find a new love.</p>
                 </Text>
                 <ButtonsContainer>
                     <Button>Find a Dog</Button>
