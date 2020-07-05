@@ -8,17 +8,17 @@ const pets = [
     {
         name: "Jackie",
         img: catImage,
-        id: "1234"
+        id: "1"
     },
     {
         name: "Pensil",
         img: catImage,
-        id: "12345"
+        id: "2"
     },
     {
         name: "Bob",
         img: catImage,
-        id: "123456"
+        id: "3"
     },
 ];
 
