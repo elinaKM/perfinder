@@ -5,7 +5,7 @@ import AskAboutForm from '../components/pet/AskAboutForm'
 
 const petsDB = {
     "1": {
-        name: "Jackie",
+        name: "Jackie and Default",
         imgs: [catSteps],
         breed: "Dvorniajka",
         location: "NewYork",
@@ -95,7 +95,9 @@ const petsDB = {
 
 const PetPage = (props) => {
 
-    const { imgs, name, breed, location, age, gender, size, color, aboutInfo, org } = petsDB[props.petId];
+    const propObject = petsDB.hasOwnProperty(props.petId) ? petsDB[props.petId] : petsDB[1];
+
+    const { imgs, name, breed, location, age, gender, size, color, aboutInfo, org } = propObject;
 
     return (
         <Wrapper>
