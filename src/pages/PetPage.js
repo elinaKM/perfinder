@@ -5,7 +5,7 @@ import AskAboutForm from '../components/pet/AskAboutForm'
 
 const petsDB = {
     "1": {
-        name: "Gula",
+        name: "Jackie",
         imgs: [catSteps],
         breed: "Dvorniajka",
         location: "NewYork",
@@ -34,7 +34,7 @@ const petsDB = {
         org: "CARMA, Fredericton Chapter"
     },
     "2": {
-        name: "Gula",
+        name: "Pensil",
         imgs: [catSteps],
         breed: "Dvorniajka",
         location: "NewYork",
@@ -63,7 +63,7 @@ const petsDB = {
         org: "CARMA, Fredericton Chapter"
     },
     "3": {
-        name: "Gula",
+        name: "Bob",
         imgs: [catSteps],
         breed: "Dvorniajka",
         location: "NewYork",
