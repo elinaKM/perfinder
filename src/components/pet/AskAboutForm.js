@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Button from '../common/Button'
-import InputWithLabel from '../common/InputWithLabel'
-import TextAreaWithLabel from '../common/TextAreaWithLabel'
+import LabeledInput from '../common/LabeledInput'
+import LabeledTextArea from '../common/LabeledTextArea'
 
 const AskAboutForm = ({ name, id, org }) => {
 
@@ -22,15 +22,15 @@ const AskAboutForm = ({ name, id, org }) => {
             <About>Ask about {name}</About>
             <To>To: {org}</To>
             <UserDetails>
-                <InputWithLabel label="First name" id="firstName" type="text" value={userName} onChange={(evt) => setUserName(evt.currentTarget.value)}/>
+                <LabeledInput label="First name" id="firstName" type="text" value={userName} onChange={(evt) => setUserName(evt.currentTarget.value)}/>
 
-                <InputWithLabel label="Last name" id="lastName" type="text" value={userLastName} onChange={(evt) => setUserLastName(evt.currentTarget.value)}/>
+                <LabeledInput label="Last name" id="lastName" type="text" value={userLastName} onChange={(evt) => setUserLastName(evt.currentTarget.value)}/>
 
-                <InputWithLabel label="Email" id="email" type="email" value={email} onChange={(evt) => setEmail(evt.currentTarget.value)}/>
+                <LabeledInput label="Email" id="email" type="email" value={email} onChange={(evt) => setEmail(evt.currentTarget.value)}/>
 
-                <InputWithLabel label="Phone number" id="phone" type="tel" value={phone} onChange={(evt) => setPhone(evt.currentTarget.value)}/>
+                <LabeledInput label="Phone number" id="phone" type="tel" value={phone} onChange={(evt) => setPhone(evt.currentTarget.value)}/>
 
-                <TextAreaWithLabel label="Message" id="message" name="message" rows="10" value={message} onChange={(evt) => setmessage(evt.currentTarget.value)}/>
+                <LabeledTextArea label="Message" id="message" name="message" rows="10" value={message} onChange={(evt) => setmessage(evt.currentTarget.value)}/>
             </UserDetails>
             <SubmitButtonWrapper>
                 <Button type="button" onClick={submitHandler}>Send Message</Button>

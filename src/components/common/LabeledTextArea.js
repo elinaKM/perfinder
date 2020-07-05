@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const InputWithLabel = (props) => (
+const LabeledTextArea = (props) => (
     <Wrapper>
         <label>{props.label}</label>
-        <StyledInput {...props}/>
+        <StyledTextArea {...props}/>
     </Wrapper>
 )
 
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
     margin-bottom: 20px;
 `
 
-const StyledInput = styled.input`
+const StyledTextArea = styled.textarea`
     border: 1px solid ${props => props.theme.colors.border};
     border-radius: ${props => props.theme.borderRadius.button};
     font-size: ${props => props.theme.fontSizes.text};
@@ -27,4 +27,4 @@ const StyledInput = styled.input`
     }
 `
 
-export default InputWithLabel
+export default LabeledTextArea
