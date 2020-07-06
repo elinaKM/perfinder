@@ -3,13 +3,14 @@ import { Router } from "@reach/router";
 import styled from "styled-components";
 import Home from "./pages/Home";
 import PetPage from "./pages/PetPage";
+import SearchPage from "./pages/SearchPage";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SideDrawerMenu from "./components/sideMenu/SideDrawerMenu";
 import Backdrop from "./components/common/Backdrop";
 import "./index.css";
-import { ROOT, PET } from "./configuration/pathes";
+import { ROOT, PET, PETS } from "./configuration/pathes";
 
 const App = () => {
   const [isMenuVisible, setMenuVisible] = useState(false);
@@ -27,6 +28,7 @@ const App = () => {
         <Router>
           <Home path={ROOT} />
           <PetPage path={ROOT + PET} />
+          <SearchPage path={ROOT + PETS} />
           <NotFound default />
         </Router>
       </Content>
