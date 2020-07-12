@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import catSteps from '../images/paw-print.jpg'
 import AskAboutForm from '../components/pet/AskAboutForm'
 import { petsDB } from './../petsDB'
 import find from "lodash/find"
 
 const PetPage = (props) => {
 
-    const propObject = find(petsDB, ['id', props.petId]);
+    let propObject = find(petsDB, ['id', props.petId]);
 
     if (typeof propObject === "undefined") {
         propObject = petsDB[0]
