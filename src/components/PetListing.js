@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import PetCard from './PetCard'
 
-const PetListing = ({pets}) => (
+const PetListing = ({pets, fromPreview}) => (
     <Wrapper>
         {
             pets.map((pet) =>
-            <PetCard name={pet.name} key={pet.id} img={pet.img} id={pet.id}/>
+            <PetCard name={pet.name} key={pet.id} imgs={pet.imgs} id={pet.id} fromPreview={fromPreview}/>
           )
         }
     </Wrapper>
