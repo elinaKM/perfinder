@@ -1,19 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from '@reach/router'
-import { PETS } from './../configuration/pathes'
 
-const PetCard = ({name, imgs, id, fromPreview}) => {
-    let path = id ? (fromPreview ? PETS + id :id) : PETS;
-    return (
-        <StyledLink to={path}>
-            <Image img={imgs[0]} />
+const PetCard = ({name, imgs}) => (
+    <Wrapper>
+        <Image img={imgs[0]} />
             <Name>
                 {name}
             </Name>
-        </StyledLink>
-    )
-}
+    </Wrapper>
+)
 
 const Image = styled.div`
     border-top-left-radius: ${props => props.theme.borderRadius.card} ${props => props.theme.borderRadius.card}; 
@@ -35,7 +30,7 @@ const Name = styled.div`
     font-size: ${props => props.theme.fontSizes.text};
 `
 
-const StyledLink = styled(Link)`
+const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     margin-right: 40px;
