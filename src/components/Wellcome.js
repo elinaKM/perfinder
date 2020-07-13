@@ -21,7 +21,7 @@ const Wellcome = () => (
                     <p>Pick one. Save one live. Find a new love.</p>
                 </Text>
                 <ButtonsContainer>
-                <Link to={PETS}>
+                <Link to={PETS} hello="lalala">
                     <Button>Find a Dog</Button>
                 </Link>
                 <Link to={PETS}>

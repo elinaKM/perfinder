@@ -1,3 +1,3 @@
 export const ROOT="petfinder/"
 export const PETS="pets/"
-export const PETID=":petId"
+export const PET_ID=":petId"
