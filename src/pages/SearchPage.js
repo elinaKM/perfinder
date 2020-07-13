@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import PetListing from './../components/PetListing'
+import { Link } from '@reach/router'
+import PetCard from './../components/PetCard'
 import LabeledSelect from './../components/common/LabeledSelect'
 import { petsDB, typeOpt, dogBreedsOpt, ageOpt, sizeOpt, genderOpt } from './../petsDB'
 
@@ -30,7 +31,13 @@ const SearchPage = (props) => {
                 <Title>
                     Available {type}s for Adoption:
                 </Title>
-                <PetListing pets={petsDB}/>
+                <ListingWrapper>
+                    {petsDB.map((pet) =>
+                        <StyledLink to={pet.id}>
+                            <PetCard name={pet.name} key={pet.id} imgs={pet.imgs} id={pet.id} />
+                        </StyledLink>
+                    )}
+                </ListingWrapper>
             </ListingContainer>
         </Wrapper>
     )
@@ -53,7 +60,17 @@ const Selectors = styled.div`
 `
 
 const ListingContainer = styled.div`
+`
 
+const ListingWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: ${props => props.theme.screenWidthBreakPoints.ipad}) {
+        flex-direction: column;
+    }
+`
+const StyledLink = styled(Link)`
+     text-decoration: none;
 `
 
 const Title = styled.div`
