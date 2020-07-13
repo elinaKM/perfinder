@@ -11,7 +11,7 @@ const PetListingPreview = ({pets}) => (
         </Title>
         <ListingWrapper>
             <PetListing pets={pets} fromPreview/>
-            <MeetMoreButton name={"Meet more friends"} imgs={[catStepsImg]}/>
+            <MeetMoreButton name="Meet more friends" imgs={[catStepsImg]}/>
         </ListingWrapper>
     </Wrapper>
 )
