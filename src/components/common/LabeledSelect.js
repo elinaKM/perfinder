@@ -3,10 +3,20 @@ import styled from 'styled-components'
 import Select from 'react-select'
 import find from "lodash/find"
 
-const LabeledSelect = ({label, value, options, ...rest}) => (
+const getStringValues = (value) => {
+    return value == null ? [] : value.map((item) => item.value);
+}
+
+const LabeledSelect = ({label, value, options, onChange, ...rest}) => (
     <Wrapper>
         <label>{label}</label>
-        <StyledSelect placeholder="Any" value={value ? find(options, { value }) : null} options={options} {...rest}/>
+        <StyledSelect
+            placeholder="Any"
+            value={value ? find(options, { value }) : null}
+            onChange={(value) => onChange( rest.isMulti ? getStringValues(value) : value)}
+            options={options}
+            {...rest}
+        />
     </Wrapper>
 )
 

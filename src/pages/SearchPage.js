@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from '@reach/router'
 import PetCard from './../components/PetCard'
@@ -12,19 +12,43 @@ const SearchPage = (props) => {
     const [size, setSize] = useState([]);
     const [gender, setGender] = useState();
 
-    const getStringValues = (value) => {
-        return value == null ? [] : value.map((item) => item.value);
-    }
-
-    return(
+    return (
         <Wrapper>
             <SidePanel>
                 <Selectors>
-                    <LabeledSelect value={type} label="TYPE" options={typeOpt} onChange={(evt) => setType(evt.value)}/>
-                    <LabeledSelect  isMulti={true} label="BREEDS" options={dogBreedsOpt} value={breeds} onChange={(evt) => setBreeds(getStringValues(evt))}/>
-                    <LabeledSelect  isMulti={true} label="AGE" options={ageOpt} value={age} onChange={(evt) => setAge(getStringValues(evt))}/>
-                    <LabeledSelect  isMulti={true} label="SIZE" options={sizeOpt} value={size} onChange={(evt) => setSize(getStringValues(evt))}/>
-                    <LabeledSelect  value={gender} label="GENDER" options={genderOpt} onChange={(evt) => setGender(evt.value)}/>
+                    <LabeledSelect 
+                        value={type}
+                        label="TYPE"
+                        options={typeOpt}
+                        onChange={(evt) => setType(evt.value)}
+                    />
+                    <LabeledSelect
+                        isMulti={true}
+                        label="BREEDS"
+                        options={dogBreedsOpt}
+                        value={breeds}
+                        onChange={(evt) => setBreeds((evt))}
+                    />
+                    <LabeledSelect
+                        isMulti={true}
+                        label="AGE"
+                        options={ageOpt}
+                        value={age}
+                        onChange={(evt) => setAge(evt)}
+                    />
+                    <LabeledSelect
+                        isMulti={true}
+                        label="SIZE"
+                        options={sizeOpt}
+                        value={size}
+                        onChange={(evt) => setSize(evt)}
+                    />
+                    <LabeledSelect
+                        value={gender}
+                        label="GENDER"
+                        options={genderOpt}
+                        onChange={(evt) => setGender(evt.value)}
+                    />
                 </Selectors>
             </SidePanel>
             <ListingContainer>
