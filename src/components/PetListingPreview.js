@@ -1,23 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-import catSteps from '../images/paw-print.jpg'
+import catStepsImg from '../images/paw-print.jpg'
 import PetListing from './PetListing';
 import PetCard from './PetCard';
 
-const PetListingPreview = ({pets}) => {
-    let imagesArr = [catSteps];
-    return(
-        <Wrapper>
-            <Title>
-                Pets Available for Adoption
-            </Title>
-            <ListingWrapper>
-                <PetListing pets={pets} fromPreview/>
-                <MeetMoreButton name={"Meet more friends"} imgs={imagesArr}/>
-            </ListingWrapper>
-        </Wrapper>
-    )
-}
+const PetListingPreview = ({pets}) => (
+    <Wrapper>
+        <Title>
+            Pets Available for Adoption
+        </Title>
+        <ListingWrapper>
+            <PetListing pets={pets} fromPreview/>
+            <MeetMoreButton name={"Meet more friends"} imgs={[catStepsImg]}/>
+        </ListingWrapper>
+    </Wrapper>
+)
 
 const Title = styled.div`
     font-size: ${props => props.theme.fontSizes.title};
