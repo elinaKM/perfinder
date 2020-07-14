@@ -4,8 +4,12 @@ import Select from 'react-select'
 import find from "lodash/find"
 import map from "lodash/map"
 
-const getStringValues = (valuesArr) => {
-    return valuesArr === null ? [] : map(valuesArr, (item) => item.value);
+const getStringValues = (values, isMulti) => {
+    if (isMulti) {
+        return values === null ? [] : map(values, (item) => item.value);
+    } else {
+        return values;
+    }
 }
 
 const LabeledSelect = ({label, value, options, onChange, isMulti, ...rest}) => (
@@ -14,7 +18,7 @@ const LabeledSelect = ({label, value, options, onChange, isMulti, ...rest}) => (
         <StyledSelect
             placeholder="Any"
             value={value ? find(options, { value }) : null}
-            onChange={(value) => onChange( isMulti ? getStringValues(value) : value)}
+            onChange={(value) => onChange(getStringValues(value, isMulti))}
             options={options}
             isMulti={isMulti}
             {...rest}
