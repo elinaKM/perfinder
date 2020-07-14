@@ -4,8 +4,8 @@ import Select from 'react-select'
 import find from "lodash/find"
 import map from "lodash/map"
 
-const getStringValues = (value) => {
-    return value === null ? [] : map(value, (item) => item.value);
+const getStringValues = (valuesArr) => {
+    return valuesArr === null ? [] : map(valuesArr, (item) => item.value);
 }
 
 const LabeledSelect = ({label, value, options, onChange, ...rest}) => (
