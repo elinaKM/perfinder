@@ -8,14 +8,15 @@ const getStringValues = (valuesArr) => {
     return valuesArr === null ? [] : map(valuesArr, (item) => item.value);
 }
 
-const LabeledSelect = ({label, value, options, onChange, ...rest}) => (
+const LabeledSelect = ({label, value, options, onChange, isMulti, ...rest}) => (
     <Wrapper>
         <label>{label}</label>
         <StyledSelect
             placeholder="Any"
             value={value ? find(options, { value }) : null}
-            onChange={(value) => onChange( rest.isMulti ? getStringValues(value) : value)}
+            onChange={(value) => onChange( isMulti ? getStringValues(value) : value)}
             options={options}
+            isMulti={isMulti}
             {...rest}
         />
     </Wrapper>
