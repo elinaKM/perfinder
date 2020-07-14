@@ -10,15 +10,12 @@ const SearchPage = (props) => {
     const [breeds, setBreeds] = useState([]);
     const [age, setAge] = useState([]);
     const [size, setSize] = useState([]);
-    const [gender, setGender] = useState();
+    const [gender, setGender] = useState("");
 
     return (
         <Wrapper>
             <SidePanel>
                 <Selectors>
-                    type: {type}
-                    breeds: {breeds}
-                    age: {age}
                     <LabeledSelect 
                         value={type}
                         label="TYPE"
