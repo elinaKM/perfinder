@@ -4,27 +4,28 @@ import Select from 'react-select'
 import find from "lodash/find"
 import map from "lodash/map"
 
-const getStringValues = (values, isMulti) => {
-    if (isMulti) {
-        return values === null ? [] : map(values, (item) => item.value);
-    } else {
-        return values.value;
-    }
-}
-
-const LabeledSelect = ({label, value, options, onChangeHandler, isMulti, ...rest}) => (
-    <Wrapper>
-        <label>{label}</label>
-        <StyledSelect
-            placeholder="Any"
-            value={value ? find(options, { value }) : null}
-            onChange={(values) => onChangeHandler(getStringValues(values, isMulti))}
-            options={options}
-            isMulti={isMulti}
-            {...rest}
-        />
-    </Wrapper>
+const getStringValues = (values=[], isMulti="false") => (
+    isMulti ? map(values, (item) => item.value) : values.value
 )
+
+const LabeledSelect = ({ label, value, options, onChangeHandler, isMulti, ...rest }) => {
+
+    const onSelectValueChange = (value, isMulti) => onChangeHandler(getStringValues(value, isMulti));
+
+    return (
+        <Wrapper>
+            <label>{label}</label>
+            <StyledSelect
+                placeholder="Any"
+                value={value ? find(options, { value }) : null}
+                onChange={onSelectValueChange}
+                options={options}
+                isMulti={isMulti}
+                {...rest}
+            />
+        </Wrapper>
+    )
+}
 
 const Wrapper = styled.div`
     display: flex;
