@@ -4,7 +4,7 @@ import Select from 'react-select'
 import find from "lodash/find"
 import map from "lodash/map"
 
-const getStringValues = (values=[], isMulti="false") => (
+const getStringValues = (values=[], isMulti=false) => (
     isMulti ? map(values, (item) => item.value) : values.value
 )
 
