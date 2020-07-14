@@ -16,38 +16,41 @@ const SearchPage = (props) => {
         <Wrapper>
             <SidePanel>
                 <Selectors>
+                    type: {type}
+                    breeds: {breeds}
+                    age: {age}
                     <LabeledSelect 
                         value={type}
                         label="TYPE"
                         options={typeOpt}
-                        onChange={(evt) => setType(evt.value)}
+                        onChangeHandler={setType}
                     />
                     <LabeledSelect
                         isMulti={true}
                         label="BREEDS"
                         options={dogBreedsOpt}
                         value={breeds}
-                        onChange={(evt) => setBreeds((evt))}
+                        onChangeHandler={setBreeds}
                     />
                     <LabeledSelect
                         isMulti={true}
                         label="AGE"
                         options={ageOpt}
                         value={age}
-                        onChange={(evt) => setAge(evt)}
+                        onChangeHandler={setAge}
                     />
                     <LabeledSelect
                         isMulti={true}
                         label="SIZE"
                         options={sizeOpt}
                         value={size}
-                        onChange={(evt) => setSize(evt)}
+                        onChangeHandler={setSize}
                     />
                     <LabeledSelect
                         value={gender}
                         label="GENDER"
                         options={genderOpt}
-                        onChange={(evt) => setGender(evt.value)}
+                        onChangeHandler={setGender}
                     />
                 </Selectors>
             </SidePanel>
