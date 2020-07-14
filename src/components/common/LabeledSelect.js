@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import Select from 'react-select'
 import find from "lodash/find"
+import map from "lodash/map"
 
 const getStringValues = (value) => {
-    return value == null ? [] : value.map((item) => item.value);
+    return value === null ? [] : map(value, (item) => item.value);
 }
 
 const LabeledSelect = ({label, value, options, onChange, ...rest}) => (
