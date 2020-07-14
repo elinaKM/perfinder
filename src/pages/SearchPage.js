@@ -56,9 +56,9 @@ const SearchPage = (props) => {
                     Available {type}s for Adoption:
                 </Title>
                 <ListingWrapper>
-                    {petsDB.map((pet) =>
-                        <StyledLink to={pet.id}>
-                            <PetCard name={pet.name} key={pet.id} imgs={pet.imgs} id={pet.id} />
+                    {petsDB.map(({id, name, imgs}) =>
+                        <StyledLink to={id}>
+                            <PetCard name={name} key={id} imgs={imgs} id={id} />
                         </StyledLink>
                     )}
                 </ListingWrapper>
