@@ -7,17 +7,24 @@ import castArray from 'lodash/castArray'
 
 const LabeledSelect = ({ label, value, options, onChangeHandler, isMulti, ...rest }) => {
 
-    const onSelectHandler = (value=[]) => 
-        onChangeHandler(map(castArray(value),'value'));
-
-    const selectedOption = find(options, value);
+    const onSelectHandler = (value = []) => (
+        onChangeHandler(map(castArray(value), 'value'))
+    )
+    
+    let selectedOptions = null;
+    
+    if (value.length === 1) {
+        selectedOptions = find(options, ['value', value[0]]);
+    } else if (value.length > 1) {
+        selectedOptions = map(value, (i) => find(options, ['value', i]));  
+    }
 
     return (
         <Wrapper>
             <label>{label}</label>
             <StyledSelect
                 placeholder="Any"
-                value={selectedOption}
+                value={selectedOptions}
                 onChange={onSelectHandler}
                 options={options}
                 isMulti={isMulti}
