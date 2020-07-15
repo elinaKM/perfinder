@@ -3,16 +3,12 @@ import styled from 'styled-components'
 import Select from 'react-select'
 import find from "lodash/find"
 import map from "lodash/map"
+import castArray from 'lodash/castArray'
 
 const LabeledSelect = ({ label, value, options, onChangeHandler, isMulti, ...rest }) => {
 
-    const onSelectHandler = (value=[]) => {
-        if (Array.isArray(value)) {
-            onChangeHandler(map(value, (item) => item.value))
-        } else {
-            onChangeHandler(value.value)
-        }
-    };
+    const onSelectHandler = (value=[]) => 
+        onChangeHandler(map(castArray(value),'value'));
 
     const selectedOption = find(options, value);
 
