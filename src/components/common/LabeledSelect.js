@@ -11,13 +11,7 @@ const LabeledSelect = ({ label, value, options, onChangeHandler, isMulti, ...res
         onChangeHandler(map(castArray(value), 'value'))
     )
     
-    let selectedOptions = null;
-    
-    if (value.length === 1) {
-        selectedOptions = find(options, ['value', value[0]]);
-    } else if (value.length > 1) {
-        selectedOptions = map(value, (i) => find(options, ['value', i]));  
-    }
+    const selectedOptions = map(value, (i) => find(options, ['value', i])) || null;
 
     return (
         <Wrapper>
