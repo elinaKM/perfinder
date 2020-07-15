@@ -14,12 +14,14 @@ const LabeledSelect = ({ label, value, options, onChangeHandler, isMulti, ...res
         }
     };
 
+    const selectedOption = find(options, value);
+
     return (
         <Wrapper>
             <label>{label}</label>
             <StyledSelect
                 placeholder="Any"
-                value={value ? find(options, { value }) : null}
+                value={selectedOption}
                 onChange={onSelectHandler}
                 options={options}
                 isMulti={isMulti}
