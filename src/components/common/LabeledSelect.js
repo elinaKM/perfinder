@@ -4,13 +4,15 @@ import Select from 'react-select'
 import find from "lodash/find"
 import map from "lodash/map"
 
-const getStringValues = (values=[], isMulti=false) => (
-    isMulti ? map(values, (item) => item.value) : values.value
-)
-
 const LabeledSelect = ({ label, value, options, onChangeHandler, isMulti, ...rest }) => {
 
-    const onSelectValueChange = (value, isMulti) => onChangeHandler(getStringValues(value, isMulti));
+    const onSelectHandler = (value=[]) => {
+        if (Array.isArray(value)) {
+            onChangeHandler(map(value, (item) => item.value))
+        } else {
+            onChangeHandler(value.value)
+        }
+    };
 
     return (
         <Wrapper>
@@ -18,7 +20,7 @@ const LabeledSelect = ({ label, value, options, onChangeHandler, isMulti, ...res
             <StyledSelect
                 placeholder="Any"
                 value={value ? find(options, { value }) : null}
-                onChange={onSelectValueChange}
+                onChange={onSelectHandler}
                 options={options}
                 isMulti={isMulti}
                 {...rest}
