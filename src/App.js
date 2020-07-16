@@ -30,7 +30,7 @@ const App = () => {
             <Route path={ROOT} exact component={Home} />
             <Route path={ROOT + PETS} exact component={SearchPage} />
             <Route path={ROOT + PETS + PET_ID} component={PetPage} />
-            <Route path="*" exact component={NotFound} />
+            <Route component={NotFound} />
           </Switch>
         </Content>
         <Footer />
