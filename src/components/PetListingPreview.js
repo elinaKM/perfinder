@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from '@reach/router'
+import { Link } from 'react-router-dom'
 import catStepsImg from '../images/paw-print.jpg'
 import PetCard from './PetCard'
-import { PETS } from './../configuration/pathes'
+import { ROOT, PETS } from './../configuration/pathes'
 
 const PetListingPreview = ({ pets }) => (
     <Wrapper>
@@ -12,11 +12,11 @@ const PetListingPreview = ({ pets }) => (
         </Title>
         <ListingWrapper>
             {pets.map(({id, name, imgs}) =>
-                <StyledLink to={PETS + id} key={id}>
+                <StyledLink to={ROOT + PETS + "/" + id} key={id}>
                     <PetCard name={name} imgs={imgs} id={id} />
                 </StyledLink>
             )}
-            <StyledLink to={PETS}>
+            <StyledLink to={ROOT + PETS}>
                 <MeetMoreButton name="Meet more friends" imgs={[catStepsImg]}/>
             </StyledLink>
         </ListingWrapper>

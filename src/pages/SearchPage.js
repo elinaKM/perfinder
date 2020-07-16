@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Link } from '@reach/router'
+import { Link } from 'react-router-dom'
 import PetCard from './../components/PetCard'
 import LabeledSelect from './../components/common/LabeledSelect'
 import { petsDB, typeOpt, dogBreedsOpt, ageOpt, sizeOpt, genderOpt } from './../petsDB'
+import { ROOT, PETS } from '../configuration/pathes'
 
 const SearchPage = (props) => {
     const [type, setType] = useState("Animal");
@@ -57,7 +58,7 @@ const SearchPage = (props) => {
                 </Title>
                 <ListingWrapper>
                     {petsDB.map(({id, name, imgs}) =>
-                        <StyledLink to={id} key={id}>
+                        <StyledLink to={ROOT + PETS + "/" + id} key={id}>
                             <PetCard name={name} imgs={imgs} id={id} />
                         </StyledLink>
                     )}
