@@ -12,16 +12,21 @@ const LabeledSelect = ({ label, value, options, onChangeHandler, isMulti, ...res
     )
 
     const getOption = (optionName) => find(options, ['value', optionName]) || null;
-    
-    const valuesArr = castArray(value);
 
-    let selectedOptions = null;
+    const normalizeOptions = (isMulti=false, valuesArr=[]) => {
 
-    if (isMulti) {
-        selectedOptions = map(valuesArr, (item) => getOption(item));
-    } else if (valuesArr.length === 1){
-        selectedOptions = getOption(valuesArr[0]);
-    } 
+        if (isMulti) {
+            return map(valuesArr, (item) => getOption(item));
+        } 
+        
+        if (valuesArr.length === 1) {
+            return getOption(valuesArr[0])
+        }
+
+        return null;
+    }
+
+    const selectedOptions = normalizeOptions(isMulti, castArray(value))
 
     return (
         <Wrapper>
