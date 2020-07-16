@@ -19,7 +19,7 @@ const LabeledSelect = ({ label, value, options, onChangeHandler, isMulti, ...res
 
     if (isMulti) {
         selectedOptions = map(valuesArr, (item) => getOption(item));
-    } else if (valuesArr.length == 1){
+    } else if (valuesArr.length === 1){
         selectedOptions = getOption(valuesArr[0]);
     } 
 
