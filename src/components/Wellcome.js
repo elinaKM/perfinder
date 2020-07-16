@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import dogBackgroundImg from '../images/dog-background.jpg'
 import Button from './common/Button'
+import { Link } from '@reach/router'
+import { PETS } from "../configuration/pathes";
 
 const Wellcome = () => (
     <Wrapper>
@@ -19,8 +21,12 @@ const Wellcome = () => (
                     <p>Pick one. Save one live. Find a new love.</p>
                 </Text>
                 <ButtonsContainer>
+                <Link to={PETS} hello="lalala">
                     <Button>Find a Dog</Button>
+                </Link>
+                <Link to={PETS}>
                     <Button>Find a Cat</Button>
+                </Link>
                 </ButtonsContainer>
             </TitleWrapper>
         </ConentWrapper>

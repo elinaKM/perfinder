@@ -1,15 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from '@reach/router'
-import { PETS } from './../configuration/pathes'
 
-const PetCard = ({ name, img, id }) => (
-    <StyledLink to={id ? PETS + id : PETS} >
-        <Image img={img} />
-        <Name>
-            {name}
-        </Name>
-    </StyledLink>
+const PetCard = ({name, imgs}) => (
+    <Wrapper>
+        <Image img={imgs[0]} />
+            <Name>
+                {name}
+            </Name>
+    </Wrapper>
 )
 
 const Image = styled.div`
@@ -32,7 +30,7 @@ const Name = styled.div`
     font-size: ${props => props.theme.fontSizes.text};
 `
 
-const StyledLink = styled(Link)`
+const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     margin-right: 40px;

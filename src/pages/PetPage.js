@@ -1,102 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
-import catSteps from '../images/paw-print.jpg'
 import AskAboutForm from '../components/pet/AskAboutForm'
-
-const petsDB = {
-    "1": {
-        name: "Jackie and Default",
-        imgs: [catSteps],
-        breed: "Dvorniajka",
-        location: "NewYork",
-        age: "Young",
-        gender: "Female",
-        size: "Small",
-        color: "White",
-        aboutInfo: [
-            {
-                label: "CHARACTERISTICS",
-                info: "Quiet, Calm, Relaxed, Shy, Playful"
-            },
-            {
-                label: "COAT LENGTH",
-                info: "Short"
-            },
-            {
-                label: "HOUSE-TRAINED",
-                info: "Yes"
-            },
-            {
-                label: "HEALTH",
-                info: "Vaccinations up to date, spayed / neutered."
-            }
-        ],
-        org: "CARMA, Fredericton Chapter"
-    },
-    "2": {
-        name: "Pensil",
-        imgs: [catSteps],
-        breed: "Dvorniajka",
-        location: "NewYork",
-        age: "Young",
-        gender: "Female",
-        size: "Small",
-        color: "White",
-        aboutInfo: [
-            {
-                label: "CHARACTERISTICS",
-                info: "Quiet, Calm, Relaxed, Shy, Playful"
-            },
-            {
-                label: "COAT LENGTH",
-                info: "Short"
-            },
-            {
-                label: "HOUSE-TRAINED",
-                info: "Yes"
-            },
-            {
-                label: "HEALTH",
-                info: "Vaccinations up to date, spayed / neutered."
-            }
-        ],
-        org: "CARMA, Fredericton Chapter"
-    },
-    "3": {
-        name: "Bob",
-        imgs: [catSteps],
-        breed: "Dvorniajka",
-        location: "NewYork",
-        age: "Young",
-        gender: "Female",
-        size: "Small",
-        color: "White",
-        aboutInfo: [
-            {
-                label: "CHARACTERISTICS",
-                info: "Quiet, Calm, Relaxed, Shy, Playful"
-            },
-            {
-                label: "COAT LENGTH",
-                info: "Short"
-            },
-            {
-                label: "HOUSE-TRAINED",
-                info: "Yes"
-            },
-            {
-                label: "HEALTH",
-                info: "Vaccinations up to date, spayed / neutered."
-            }
-        ],
-        org: "CARMA, Fredericton Chapter"
-    }
-}
+import { petsDB } from './../petsDB'
+import find from "lodash/find"
 
 const PetPage = (props) => {
 
-    const propObject = petsDB.hasOwnProperty(props.petId) ? petsDB[props.petId] : petsDB[1];
+    let propObject = find(petsDB, ['id', props.petId]);
 
+    if (typeof propObject === "undefined") {
+        propObject = petsDB[0]
+    }
+    
     const { imgs, name, breed, location, age, gender, size, color, aboutInfo, org } = propObject;
 
     return (

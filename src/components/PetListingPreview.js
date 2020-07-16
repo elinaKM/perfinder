@@ -1,17 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
-import catSteps from '../images/paw-print.jpg'
-import PetListing from './PetListing';
-import PetCard from './PetCard';
+import { Link } from '@reach/router'
+import catStepsImg from '../images/paw-print.jpg'
+import PetCard from './PetCard'
+import { PETS } from './../configuration/pathes'
 
-const PetListingPreview = ({pets}) => (
+const PetListingPreview = ({ pets }) => (
     <Wrapper>
         <Title>
             Pets Available for Adoption
         </Title>
         <ListingWrapper>
-            <PetListing pets={pets} />
-            <MeetMoreButton name={"Meet more friends"} img={catSteps}/>
+            {pets.map(({id, name, imgs}) =>
+                <StyledLink to={PETS + id} key={id}>
+                    <PetCard name={name} imgs={imgs} id={id} />
+                </StyledLink>
+            )}
+            <StyledLink to={PETS}>
+                <MeetMoreButton name="Meet more friends" imgs={[catStepsImg]}/>
+            </StyledLink>
         </ListingWrapper>
     </Wrapper>
 )
@@ -29,6 +36,9 @@ const ListingWrapper = styled.div`
     @media (max-width: ${props => props.theme.screenWidthBreakPoints.ipad}) {
         flex-direction: column;
     }
+`
+const StyledLink = styled(Link)`
+     text-decoration: none;
 `
 
 const MeetMoreButton = styled(PetCard)`
