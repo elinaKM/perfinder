@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Router } from "@reach/router";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 import Home from "./pages/Home";
 import PetPage from "./pages/PetPage";
@@ -17,23 +17,25 @@ const App = () => {
   const sideDrawerCloseHandler = () => setMenuVisible(false);
 
   return (
-    <Wrapper>
-      <SideDrawerMenu
-        isOpen={isMenuVisible}
-        onCloseMenu={sideDrawerCloseHandler}
-      />
-      {isMenuVisible && <Backdrop clickHandler={sideDrawerCloseHandler} />}
-      <Header setMenuVisible={setMenuVisible} />
-      <Content>
-        <Router>
-          <Home path={ROOT} />
-          <SearchPage path={ROOT + PETS} />
-          <PetPage path={ROOT + PETS + PET_ID} />
-          <NotFound default />
-        </Router>
-      </Content>
-      <Footer />
-    </Wrapper>
+    <BrowserRouter>
+      <Wrapper>
+        <SideDrawerMenu
+          isOpen={isMenuVisible}
+          onCloseMenu={sideDrawerCloseHandler}
+        />
+        {isMenuVisible && <Backdrop clickHandler={sideDrawerCloseHandler} />}
+        <Header setMenuVisible={setMenuVisible} />
+        <Content>
+          <Switch>
+            <Route path={ROOT} exact component={Home} />
+            <Route path={ROOT + PETS} exact component={SearchPage} />
+            <Route path={ROOT + PETS + PET_ID} component={PetPage} />
+            <Route path="*" exact component={NotFound} />
+          </Switch>
+        </Content>
+        <Footer />
+      </Wrapper>
+    </BrowserRouter>
   );
 };
 
