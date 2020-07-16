@@ -6,7 +6,7 @@ import find from "lodash/find"
 
 const PetPage = (props) => {
 
-    let propObject = find(petsDB, ['id', props.petId]);
+    let propObject = find(petsDB, ['id', props.match.params.petId]);
 
     if (typeof propObject === "undefined") {
         propObject = petsDB[0]
