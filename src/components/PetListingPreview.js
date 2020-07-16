@@ -12,8 +12,8 @@ const PetListingPreview = ({ pets }) => (
         </Title>
         <ListingWrapper>
             {pets.map(({id, name, imgs}) =>
-                <StyledLink to={PETS + id}>
-                    <PetCard name={name} key={id} imgs={imgs} id={id} />
+                <StyledLink to={PETS + id} key={id}>
+                    <PetCard name={name} imgs={imgs} id={id} />
                 </StyledLink>
             )}
             <StyledLink to={PETS}>

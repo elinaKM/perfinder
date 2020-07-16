@@ -57,8 +57,8 @@ const SearchPage = (props) => {
                 </Title>
                 <ListingWrapper>
                     {petsDB.map(({id, name, imgs}) =>
-                        <StyledLink to={id}>
-                            <PetCard name={name} key={id} imgs={imgs} id={id} />
+                        <StyledLink to={id} key={id}>
+                            <PetCard name={name} imgs={imgs} id={id} />
                         </StyledLink>
                     )}
                 </ListingWrapper>
