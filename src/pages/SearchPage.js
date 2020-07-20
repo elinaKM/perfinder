@@ -6,7 +6,7 @@ import LabeledSelect from './../components/common/LabeledSelect'
 import { petsDB, typeOpt, dogBreedsOpt, ageOpt, sizeOpt, genderOpt } from './../petsDB'
 import { ROOT, PETS } from '../configuration/pathes'
 
-const SearchPage = (props) => {
+const SearchPage = () => {
     const location = useLocation();
     const [type, setType] = useState(location.state ? location.state.animalType: "Animal");
     const [breeds, setBreeds] = useState([]);
