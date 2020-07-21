@@ -14,8 +14,6 @@ const SearchPage = () => {
     const [size, setSize] = useState([]);
     const [gender, setGender] = useState("");
 
-    console.log(location.state ? location.state.animalType : "none");
-
     return (
         <Wrapper>
             <SidePanel>
