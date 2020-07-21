@@ -5,6 +5,17 @@ import Button from './common/Button'
 import { Link } from 'react-router-dom'
 import { ROOT, PETS } from "../configuration/pathes";
 
+const SearchLink = ({ type }) => (
+    <Link to={{
+        pathname: ROOT + PETS,
+        state: {
+            animalType: type
+        }
+    }}>
+        <Button>Find a {type}</Button>
+    </Link>
+)
+
 const Wellcome = () => (
     <Wrapper>
         <BackgroundImage>
@@ -21,12 +32,8 @@ const Wellcome = () => (
                     <p>Pick one. Save one live. Find a new love.</p>
                 </Text>
                 <ButtonsContainer>
-                <Link to={ROOT + PETS}>
-                    <Button>Find a Dog</Button>
-                </Link>
-                <Link to={ROOT + PETS}>
-                    <Button>Find a Cat</Button>
-                </Link>
+                    <SearchLink type="Dog" />
+                    <SearchLink type="Cat" />
                 </ButtonsContainer>
             </TitleWrapper>
         </ConentWrapper>

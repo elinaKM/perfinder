@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import PetCard from './../components/PetCard'
 import LabeledSelect from './../components/common/LabeledSelect'
 import { petsDB, typeOpt, dogBreedsOpt, ageOpt, sizeOpt, genderOpt } from './../petsDB'
 import { ROOT, PETS } from '../configuration/pathes'
 
-const SearchPage = (props) => {
-    const [type, setType] = useState("Animal");
+const SearchPage = () => {
+    const location = useLocation();
+    const [type, setType] = useState(location.state ? location.state.animalType: "Animal");
     const [breeds, setBreeds] = useState([]);
     const [age, setAge] = useState([]);
     const [size, setSize] = useState([]);

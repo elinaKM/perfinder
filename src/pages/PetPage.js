@@ -1,4 +1,5 @@
 import React from 'react'
+import { useParams } from 'react-router-dom' 
 import styled from 'styled-components'
 import AskAboutForm from '../components/pet/AskAboutForm'
 import { petsDB } from './../petsDB'
@@ -6,7 +7,8 @@ import find from "lodash/find"
 
 const PetPage = (props) => {
 
-    let propObject = find(petsDB, ['id', props.match.params.petId]);
+    const {petId} = useParams();
+    let propObject = find(petsDB, ['id', petId]);
 
     if (typeof propObject === "undefined") {
         propObject = petsDB[0]
