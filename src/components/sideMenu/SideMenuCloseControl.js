@@ -9,7 +9,7 @@ const SideMenuCloseControl = ({ onCloseMenu }) =>
 
 const Icon = styled.div`
   margin-left: 85%;
-  &:hover {
+  &:hover, :focus {
     fill: ${props => props.theme.colors.primary};
     cursor: pointer;
   }

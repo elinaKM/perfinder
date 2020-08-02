@@ -60,7 +60,7 @@ const StyledLink = styled.a`
     text-decoration: none;
     color: ${props => props.theme.colors.text};
     font-size: ${props => props.theme.fontSizes.title};
-    &:hover {
+    &:hover , :focus{
         color: ${props => props.theme.colors.primary};
     }
 `

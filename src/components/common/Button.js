@@ -15,11 +15,9 @@ const StyledButton = styled.button`
     font-size: ${props => props.theme.fontSizes.text};
     font-family: inherit;
     border-radius: ${props => props.theme.borderRadius.button};
-    &:hover {
-        box-shadow: 0 8px 6px -6px #423535;
-    }
-    &:focus {
+    &:hover, :focus {
         outline: none;
+        box-shadow: 0 8px 6px -6px #423535;
     }
 `
 export default Button;
