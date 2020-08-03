@@ -33,10 +33,10 @@ const PetPage = (props) => {
                     </Location>
                 </Basics>
                 <InShort>
-                    <li>{age}</li>
-                    <li>{gender}</li>
-                    <li>{size}</li>
-                    <li>{color}</li>
+                    <Detail>{age}</Detail>
+                    <Detail>{gender}</Detail>
+                    <Detail>{size}</Detail>
+                    <Detail>{color}</Detail>
                 </InShort>
                 <About>
                     About
@@ -51,15 +51,11 @@ const PetPage = (props) => {
 }
 
 const Wrapper = styled.div`
-    padding: 50px;
+    padding: 80px 50px;
     background-color: ${props => props.theme.colors.secondary};
     font-size: ${props => props.theme.fontSizes.text};
     font-family: Nexa, Arial, Helvetica, sans-serif;
     color: ${props => props.theme.colors.text};
-    @media (max-width: ${props => props.theme.screenWidthBreakPoints.mobile}) {
-        padding: 20px;
-    }
-    padding-top: 80px;
     `
 
 const DetailsCard = styled.div`
@@ -99,14 +95,17 @@ const Location = styled.div`
 
 const InShort = styled.ul`
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-left: 20px;
-    margin-bottom: 40px;
-    max-width: 300px;
-    @media (max-width: ${props => props.theme.screenWidthBreakPoints.mobile}) {
+    @media (max-width: ${props => props.theme.screenWidthBreakPoints.ipad}) {
         flex-direction: column;
     }
 `
+
+const Detail = styled.li`
+    margin-right: 30px;
+`
+
 const About = styled.div`
     font-size: ${props => props.theme.fontSizes.title};
     margin-bottom: 20px;
